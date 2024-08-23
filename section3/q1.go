@@ -13,7 +13,7 @@ func NewMultiStack[T any](numStacks int) *MultiStack[T] {
 	return &MultiStack[T]{tops: tops} //Need to initialize with the generic type
 }
 
-func (s *MultiStack[T]) Push(stackNum int, val T) { // need set method struct point with generic type
+func (s *MultiStack[T]) Push(stackNum int, val T) { // need set method struct pointer with generic type
 	if s.tops[stackNum] < 0 {
 		s.tops[stackNum] = stackNum
 	} else {
